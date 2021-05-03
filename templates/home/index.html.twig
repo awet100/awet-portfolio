@@ -3,8 +3,116 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-    <div class="w-50 m-auto pt-5">
-        <h2 class="text-black-50">Hello, I am Awet, Junior PHP web developer!</h2>
-        <img class="align-content-center img-thumbnail" src="{{ asset('images/no-bad-day.jpg') }}" alt="Thumbnail image">
+
+    <div class="">
+
+        <div class="w-50 m-auto pt-5">
+            <h2 class="text-center text-resize-2 text-light">Welcome, I am Awet, junior <span class="unique">PHP</span> web developer!</h2>
+        </div>
+
+        <div class="align-baseline mt-5 p-5">
+            <p class="text-light text-center">I am junior developer recently graduated from <a href="https://becode.org/">BeCode.org</a> and then did my internship in
+                <a href="https://www.8trust.com/">8Trust</a>. I love coding with PHP, I got in deep with PHP to Symfony, Laminas(Zend). I have build some projects that have APIs and interaction with database and third party services which can make me junior back end developer. So at the moment I am looking for a position to leverage my experience and continuously work on my growth and growth of my team.</p>
+        </div>
+
+
+        <section class="m-5 p-5 bg-dark">
+
+            <!--Section heading-->
+            <h2 class="h1-responsive font-weight-bold text-center my-4 text-light">Contact Me</h2>
+            <!--Section description-->
+            <p class="text-center w-responsive mx-auto mb-5 text-light">If you are interested to know more about me? Please contact me directly. And I will be available
+                to help you with your request.</p>
+
+            <div class="row">
+
+                <!--Grid column-->
+                <div class="col-md-9 mb-md-0 mb-5">
+                    <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+
+                        <!--Grid row-->
+                        <div class="row">
+
+                            <!--Grid column-->
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <input type="text" id="name" name="name" class="form-control">
+                                    <label for="name" class="text-light">Your name</label>
+                                </div>
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <input type="text" id="email" name="email" class="form-control">
+                                    <label for="email" class="text-light">Your email</label>
+                                </div>
+                            </div>
+                            <!--Grid column-->
+
+                        </div>
+                        <!--Grid row-->
+
+                        <!--Grid row-->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="md-form mb-0">
+                                    <input type="text" id="subject" name="subject" class="form-control">
+                                    <label for="subject" class="text-light">Subject</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Grid row-->
+
+                        <!--Grid row-->
+                        <div class="row">
+
+                            <!--Grid column-->
+                            <div class="col-md-12">
+
+                                <div class="md-form">
+                                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                    <label for="message" class="text-light">Your message</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--Grid row-->
+
+                    </form>
+
+                    <div class="text-center text-md-left">
+                        <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+                    </div>
+                    <div class="status"></div>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-3 text-center">
+                    <ul class="list-unstyled mb-0">
+                        <li><i class="fas fa-map-marker-alt fa-2x text-white-50"></i>
+                            <p class="text-light">San Francisco, CA 94126, USA</p>
+                        </li>
+
+                        <li><i class="fas fa-phone mt-4 fa-2x text-white-50"></i>
+                            <p class="text-light">+ 01 234 567 89</p>
+                        </li>
+
+                        <li><i class="fas fa-envelope mt-4 fa-2x text-white-50"></i>
+                            <p class="text-light">contact@mdbootstrap.com</p>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+            </div>
+
+        </section>
+
+
     </div>
+
+
 {% endblock %}

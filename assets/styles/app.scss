@@ -1,7 +1,19 @@
 @import "~bootstrap/scss/bootstrap";
 body {
-    background-color: lightgray;
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
 }
 .text-resize-2 {
-    font-size:10vw;
+    font-size:3vw;
+}
+
+.unique {
+    color: gold;
+    border: 1px solid gray;
+    text-shadow: whitesmoke;
+    font-family: Gayathri, serif;
 }
