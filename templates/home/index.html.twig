@@ -6,18 +6,21 @@
 
     <div class="">
 
-        <div class="w-50 m-auto pt-5">
-            <h2 class="text-center text-resize-4 unique">Welcome, I am Awet, junior <span class="text-light">PHP</span> web developer!</h2>
+        <div class="w-50 m-auto pt-5 d-flex justify-content-around">
+            <h2 class="text-center unique">Welcome, I am Awet, junior <span class="text-light">PHP</span> web developer!</h2>
+            <img class="img-fluid w-25 pl-4 rounded" src="{{ asset('images/my-photo.jpg') }}" alt="my photo">
         </div>
 
-        <div class="align-baseline mt-5 p-5">
-            <p class="text-white text-center">I am junior developer recently graduated from <a href="https://becode.org/">BeCode.org</a> and then did my internship in
-                <a href="https://www.8trust.com/">8Trust</a>. I love coding with PHP, I got in deep with PHP to Symfony, Laminas(Zend). I have build some projects that have APIs and interaction with database and third party services which can make me junior back end developer. So at the moment I am looking for a position to leverage my experience and continuously work on my growth and growth of my team.</p>
+        <div class="align-baseline mt-5 p-5 bg-info m-5">
+            <p class="text-black text-center">I am junior developer recently graduated from <a class="text-light" href="https://becode.org/">BeCode.org</a> and then did my internship in
+                <a class="text-light" href="https://www.8trust.com/">8Trust</a>. I love coding with PHP, I got in deep with PHP to Symfony, Laminas(Zend). I have build some projects that have APIs and interaction with database and third party services which can make me junior back end developer. So at the moment I am looking for a position to leverage my experience and continuously work on my growth and growth of my team.
+            </p>
+            <p class="font-weight-bolder p-3 text-center">For more info you can see the buttons below. Thank you!</p>
+            <div class="links text-center">
+                <a class="btn btn-outline-light fas fa-file-pdf" href="{{ asset('doc/Awets Resume.pdf') }}"> Open Resume</a>
+                <a class="btn btn-outline-light fas fa-download" href="{{ asset('doc/Awets Resume.pdf') }}" download="newfilename"> Download Resume</a>
+            </div>
         </div>
-
-        <section class="bg-info p-3">
-            <p class="text-light"> To see more about me in the form of CV <a class="btn btn-outline-light fas fa-file-pdf" href="{{ asset('doc/Awets Resume.pdf') }}"> Open Resume</a> , Or you can <a class="btn btn-outline-light fas fa-download" href="{{ asset('doc/Awets Resume.pdf') }}" download="newfilename"> Download Resume</a></p>
-        </section>
 
         <section class="m-5 p-5 bg-dark">
 
