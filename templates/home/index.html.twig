@@ -4,28 +4,29 @@
 
 {% block body %}
 
-    <div class="">
+    <div class="my-5">
 
-        <div class="w-50 m-auto pt-5 d-flex justify-content-around">
+        <div class="w-75 m-auto pt-5 d-flex">
             <h2 class="text-center unique">Welcome, I am Awet, junior <span class="text-light">PHP</span> web developer!</h2>
-            <img class="img-fluid w-25 pl-4 rounded" src="{{ asset('images/my-photo.jpg') }}" alt="my photo">
+            <img class="img-fluid rounded-circle float-left w-50" src="{{ asset('images/my-photo.jpg') }}" alt="my photo">
         </div>
 
-        <div class="align-baseline mt-5 p-5 bg-info m-5">
+        <div class="align-baseline mt-5 p-5 bg-info m-5 rounded" id="about">
+            <h2 class="h1-responsive font-weight-bold text-center text-light">About Me</h2>
             <p class="text-black text-center">I am junior developer recently graduated from <a class="text-light" href="https://becode.org/">BeCode.org</a> and then did my internship in
                 <a class="text-light" href="https://www.8trust.com/">8Trust</a>. I love coding with PHP, I got in deep with PHP to Symfony, Laminas(Zend). I have build some projects that have APIs and interaction with database and third party services which can make me junior back end developer. So at the moment I am looking for a position to leverage my experience and continuously work on my growth and growth of my team.
             </p>
             <p class="font-weight-bolder p-3 text-center">For more info you can see the buttons below. Thank you!</p>
             <div class="links text-center">
-                <a class="btn btn-outline-light fas fa-file-pdf" href="{{ asset('doc/Awets Resume.pdf') }}"> Open Resume</a>
+                <a class="btn btn-outline-light fas fa-file-pdf m-3" href="{{ asset('doc/Awets Resume.pdf') }}"> Open Resume</a>
                 <a class="btn btn-outline-light fas fa-download" href="{{ asset('doc/Awets Resume.pdf') }}" download="newfilename"> Download Resume</a>
             </div>
         </div>
 
-        <section class="m-5 p-5 bg-dark">
+        <section class="m-5 p-5 bg-dark rounded" id="contact">
 
             <!--Section heading-->
-            <h2 class="h1-responsive font-weight-bold text-center my-4 text-light">Contact Me</h2>
+            <h2 class="h1-responsive font-weight-bold text-center text-light">Contact Me</h2>
             <!--Section description-->
             <p class="text-center w-responsive mx-auto mb-5 text-light">If you are interested to know more about me? Please contact me directly. And I will be available
                 to help you with your request.</p>
@@ -89,7 +90,7 @@
                     </form>
 
                     <div class="text-center text-md-left">
-                        <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+                        <a class="btn btn-primary btn-block" onclick="document.getElementById('contact-form').submit();">Send</a>
                     </div>
                     <div class="status"></div>
                 </div>
