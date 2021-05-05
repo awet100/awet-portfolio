@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Awet Portfolio{% endblock %}
 
 {% block body %}
 
@@ -31,11 +31,11 @@
             <p class="text-center w-responsive mx-auto mb-5 text-light">If you are interested to know more about me? Please contact me directly. And I will be available
                 to help you with your request.</p>
 
-            <div class="row">
+            <div class="row form-m-5">
 
                 <!--Grid column-->
                 <div class="col-md-9 mb-md-0 mb-5">
-                    <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                    <form id="contact-form" name="contact-form" action="{{ path('email') }}" method="POST">
 
                         <!--Grid row-->
                         <div class="row">
@@ -87,12 +87,14 @@
                         </div>
                         <!--Grid row-->
 
+                        <div class="text-center text-md-left">
+                            <input type="submit" value="Send" class="btn btn-primary btn-block">
+                        </div>
+
                     </form>
 
-                    <div class="text-center text-md-left">
-                        <a class="btn btn-primary btn-block" onclick="document.getElementById('contact-form').submit();">Send</a>
-                    </div>
                     <div class="status"></div>
+
                 </div>
                 <!--Grid column-->
 

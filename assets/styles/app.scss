@@ -14,10 +14,23 @@ body {
 }
 
 .unique {
-    font-size:4vw;
+    font-size:5vw;
     color: gold;
     align-self: end;
     border: 1px solid gray;
     text-shadow: whitesmoke;
     font-family: Gayathri, serif;
+}
+
+.form-m-5 {
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .form-m-5 {
+        margin: 5em;
+    }
+    .unique {
+        font-size:4vw;
+    }
 }
