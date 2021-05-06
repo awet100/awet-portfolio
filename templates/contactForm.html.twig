@@ -1,0 +1,103 @@
+<section class="m-5 p-5 bg-dark rounded" id="contact">
+
+    <!--Section heading-->
+    <h2 class="h1-responsive font-weight-bold text-center text-light">Contact Me</h2>
+    <!--Section description-->
+    <p class="text-center w-responsive mx-auto mb-5 text-light">If you are interested to know more about me? Please contact me directly. And I will be available
+        to help you with your request.</p>
+
+    <div class="row form-m-5">
+
+        <!--Grid column-->
+        <div class="col-md-9 mb-md-0 mb-5">
+            <form id="contact-form" name="contact-form" action="{{ path('email') }}" method="POST">
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="name" name="name" class="form-control" required>
+                            <label for="name" class="text-light">Your name</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="email" name="email" class="form-control" required>
+                            <label for="email" class="text-light">Your email</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="subject" name="subject" class="form-control" required>
+                            <label for="subject" class="text-light">Subject</label>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" required></textarea>
+                            <label for="message" class="text-light">Your message</label>
+                        </div>
+
+                    </div>
+                </div>
+                <!--Grid row-->
+
+                <div class="text-center text-md-left">
+                    <input type="submit" value="Send" class="btn btn-primary btn-block">
+                </div>
+
+            </form>
+
+            <div class="status text-center mt-3">
+                {% if message != "" and status %}
+                    <p class="bg-success">{{ message }}</p>
+                {% elseif message != "" and not status %}
+                    <p class="bg-warning">{{ message }}</p>
+                {% endif %}
+            </div>
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-3 text-center">
+            <ul class="list-unstyled mb-0">
+                <li><i class="fas fa-map-marker-alt fa-2x text-white-50"></i>
+                    <p><a class="text-light" href="https://goo.gl/maps/ye7FiqBDbP1jXzhU6" target="_blank">Kortrijk 8500, Belgium</a></p>
+                </li>
+
+                <li><i class="fas fa-phone mt-4 fa-2x text-white-50"></i>
+                    <p><a class="text-light" href="tel:8882192787">Call me at 888-219-2787</a></p>
+                </li>
+
+                <li><i class="fas fa-envelope mt-4 fa-2x text-white-50"></i>
+                    <p><a class="text-light" href = "mailto:abc@example.com?subject = Feedback&body = Message">contact@mdbootstrap.com</a></p>
+                </li>
+            </ul>
+        </div>
+        <!--Grid column-->
+
+    </div>
+
+</section>
+

@@ -13,10 +13,12 @@ use Symfony\Component\Routing\Annotation\Route;
 class HomeController extends AbstractController
 {
     #[Route('/', name: 'home')]
-    public function index(): Response
+    public function index(Request $request): Response
     {
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
+            'message' => $request->query->get('message'),
+            'status' => $request->query->get('status'),
         ]);
     }
 
@@ -26,7 +28,10 @@ class HomeController extends AbstractController
     #[Route('/email', name: 'email')]
     public function sendEmail(MailerInterface $mailer, Request $request): Response
     {
-        if ($request->request->get('email') && $request->request->get('subject') && $request->request->get('message')) {
+        $message = "";
+        $status = "";
+
+        if (filter_var($request->request->get('email'), FILTER_VALIDATE_EMAIL)) {
 
             $message = $request->request->get('message');
             $email = (new Email())
@@ -38,9 +43,15 @@ class HomeController extends AbstractController
                 ->html("<p>$message</p>");
 
             $mailer->send($email);
+
+            $message = "Form successful submitted, Thank you for contacting Mr/Ms {$request->request->get('name')}";
+            $status = true;
+        } else {
+            $message = "Email address {$request->request->get('email')} is considered invalid.\n";
+            $status = false;
         }
 
-        return $this->redirectToRoute('home');
+        return $this->redirectToRoute('home', ['message' => $message, 'status' => $status]);
     }
 
 }
